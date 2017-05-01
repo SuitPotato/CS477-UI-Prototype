@@ -41,20 +41,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">CS 477</a>
+                <a class="navbar-brand" href=# >CS 477</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="/waiter">Request Waiter</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Order</a>
-                    </li>
+					
+						
+					<li>
+						<a href="/foodlist">Food List</a>
+					</li>
+					<li>
+						<a href="/drinklist">Drink List</a>
+					</li>
+					<li>
+						<a href="/createfood">Create Food</a>
+					</li>
+					<li>
+						<a href="/createdrink">Create Drink</a>
+					</li>
+	
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -78,29 +87,29 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/burger.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Delectable Burger</a>
+                    <a href="/order">Delectable Burger</a>
                 </h3>
                 <p>This bold burger comes directly from the grill bursting onto the plate! Enjoy this delicious classic!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Lobster.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Beer-steamed Lobster</a>
+                    <a href="/order">Beer-steamed Lobster</a>
                 </h3>
                 <p>Enjoy the catch from the sea with your favorite ice cold drink!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/steak.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Sizzling Steak</a>
+                    <a href="/order">Sizzling Steak</a>
                 </h3>
                 <p>This succulent steak is a classic! Enjoy the tantalizing juicy steak with freshly picked greens.</p>
             </div>
@@ -110,29 +119,29 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Salmon.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Honey-glazed Salmon</a>
+                    <a href="/order">Honey-glazed Salmon</a>
                 </h3>
                 <p>The steak of the sea arrives to your plate with the hint of honey. Open your tastebuds and enjoy!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Pizza.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Pizza</a>
+                    <a href="/order">Pizza</a>
                 </h3>
                 <p>An American staple. What could go wrong?</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Sushi Special.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Sushi Special</a>
+                    <a href="/order">Sushi Special</a>
                 </h3>
                 <p>In need of a foreign taste? Try our insane sushi special straight from a Professional Sushi Chef!</p>
             </div>
@@ -141,16 +150,16 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Ramen.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Ramen</a>
+                    <a href="/order">Ramen</a>
                 </h3>
                 <p>Flavors around the world combine in one of the most popular asian dishes. Ramen! Drop your ramen package and try the real thing!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Curry.jpg' %}" alt="">
                 </a>
                 <h3>
@@ -159,45 +168,13 @@
                 <p>Rice, curry, and crispy pork. Together creating an aroma that will excite your tastebuds! Don't order if on a diet because you'll be coming back for more!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="#">
+                <a href="/order">
                     <img class="img-responsive" src="{% static 'MainPage/img/Mushroom Soup.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Mushroom Soup</a>
+                    <a href="/order">Mushroom Soup</a>
                 </h3>
                 <p>A simple, but elegant dish. Light, creamy, and oh-so tasty. A great soup to eat on a cold winter day!</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <!-- /.row -->

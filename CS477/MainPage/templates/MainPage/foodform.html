@@ -1,0 +1,50 @@
+{% extends "MainPage/base.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<form id="rendered-form" data-form-render="[object Object]" method="POST">
+{% csrf_token %}
+	<div>
+		<h1>Food Input</h1>
+	</div>
+	
+	<div class="fb-text form-group field-food_name">
+		<label class="fb-text-label">
+			Food Name:
+		</label>
+		
+		<input type="text" placeholder="Enter the food name." class="form-control" name="food_name" maxlength="20" id="food_name">
+	</div>
+			
+	<div class="fb-number form-group field-food_price">
+		<label class="fb-number-label">
+			Price
+		</label>
+		
+		<input type="number" class="form-control" name="food_price" min="1" max="50" step="1" id="food_price">
+		
+	</div>
+	
+	<div class="fb-textarea form-group field-food_description">
+		<label class="fb-textarea-label">
+			Food Description
+		</label>
+		
+		<textarea type="textarea" placeholder="Description of the food item" class="form-control" name="food_description" maxlength="300" id="food_description">
+		</textarea>
+	
+	</div>
+	
+	<div class="fb-button form-group field-button-1493179932252">
+		<button type="submit" class="btn btn-undefined" name="button-1493179932252" style="undefined" id="button-1493179932252">
+			Submit
+		</button>
+	</div>
+</form>
+	
+	
+{% endblock %}

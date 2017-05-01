@@ -1,0 +1,64 @@
+{% extends "MainPage/base.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">	
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-10">
+					<h3>
+					Food List!
+					</h3>
+					<table class="table table-bordered table-hover">
+						
+						<thead>
+							<tr>
+								<th>
+									#
+								</th>
+								<th>
+									Name
+								</th>
+								<th>
+									Price
+								</th>
+								<th>
+									Description
+								</th>
+							</tr>
+						</thead>
+						{% for food in foods %}
+						<tbody>
+							<tr>
+								<td>
+									{{ food.foodID}}
+								</td>
+								<td>
+									{{ food.name }}
+								</td>
+								<td>
+									${{ food.price }}
+								</td>
+								<td>
+									{{ food.description }}
+								</td>
+							</tr>
+						{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+	
+	
+{% endblock %}

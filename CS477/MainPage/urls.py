@@ -19,5 +19,15 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-	url(r'$', views.index),
+	url(r'^$', views.index),
+	url(r'^createfood/$', views.createFood),
+	url(r'^createdrink/$', views.createDrink),
+	
+	url(r'^waiter/$', views.request_waiter),
+	url(r'^order/$', views.order),
+	
+	url(r'^foodlist/$', views.searchFood),
+	url(r'^drinklist/$', views.search_drink),
+	
+	
 ]
