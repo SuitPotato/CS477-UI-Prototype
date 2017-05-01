@@ -22,11 +22,13 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 portfolio-item">
-                <a href="/order">
+                <a href="#burger" data-toggle="modal">
                     <img class="img-responsive" src="{% static 'MainPage/img/burger.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="/order">Delectable Burger</a>
+					<a href="#burger" data-toggle="modal" style="margin-right: 20px;">
+						Delectable Burger
+					</a>
                 </h3>
                 <p>This bold burger comes directly from the grill bursting onto the plate! Enjoy this delicious classic!</p>
             </div>
@@ -94,11 +96,13 @@
                 <p>Flavors around the world combine in one of the most popular asian dishes. Ramen! Drop your ramen package and try the real thing!</p>
             </div>
             <div class="col-md-4 portfolio-item">
-                <a href="/order">
+                <a href="#pork" data-toggle="modal">
                     <img class="img-responsive" src="{% static 'MainPage/img/Curry.jpg' %}" alt="">
                 </a>
                 <h3>
-                    <a href="#">Pork Cutlet</a>
+					<a href="#pork" data-toggle="modal" style="margin-right: 20px;">
+						Pork Cutlet
+					</a>
                 </h3>
                 <p>Rice, curry, and crispy pork. Together creating an aroma that will excite your tastebuds! Don't order if on a diet because you'll be coming back for more!</p>
             </div>
@@ -130,10 +134,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{% static 'MainPage/js/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'MainPage/js/bootstrap.min.js' %}"></script>
 
 </body>
 

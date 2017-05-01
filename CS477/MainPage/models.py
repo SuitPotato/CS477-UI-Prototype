@@ -18,3 +18,9 @@ class Drink(models.Model):
 	description = models.CharField(max_length = 150)
 	uploadTime = models.DateTimeField(auto_now_add = True)
 	
+class CartItem(models.Model):
+	itemID = models.AutoField(primary_key = True)
+	name = models.CharField(max_length = 35)
+	price = models.FloatField()
+	description = models.CharField(max_length = 150)
+	uploadTime = models.DateTimeField(auto_now_add = True)

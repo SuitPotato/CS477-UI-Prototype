@@ -16,6 +16,13 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{% static 'MainPage/css/bootstrap.min.css' %}" type = "text/css"/>
 
+    <!-- jQuery -->
+    <script src="{% static 'MainPage/js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'MainPage/js/bootstrap.min.js' %}"></script>
+
+
     <!-- Custom CSS -->
     <!-- <link href="{% static "mainpage/css/3-col-portfolio.css" %}" rel="stylesheet"> -->
 
@@ -62,6 +69,14 @@
 					<li>
 						<a href="/createdrink">Create Drink</a>
 					</li>
+					<li>
+						<a href="#pork" data-toggle="modal" style="margin-right: 20px;">
+							
+							Pork
+						</a>
+					</li>
+					<li>
+					</li>
 	
                 </ul>
             </div>
@@ -72,13 +87,105 @@
 
     <!-- Page Content -->
    {% block content %}{% endblock %}
+  
+<script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+function showAlert(){
+  if($("#myAlert").find("div#myAlert2").length==0){
+    $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Added Delectable Burger to cart.</div>");
+  }
+  $("#myAlert").css("display", "");
+}
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+function showAlert2(){
+  if($("#myAlert2").find("div#myAlert22").length==0){
+    $("#myAlert2").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Added pork to cart.</div>");
+  }
+  $("#myAlert2").css("display", "");
+}
 
+</script>
 </body>
+  <!-- MODAL CODE HERE -->
+  <div id="pork" class="modal fade">
+	  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel" style="text-align:center;"> Airwave</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="well">
+						<a href="/order">
+							<img class="img-responsive" src="{% static 'MainPage/img/Curry.jpg' %}" alt="">
+						</a>
+						<h3>
+							<a href="#">Pork Cutlet</a> - <small> 5.95 </small>
+						</h3>
+						<p>Rice, curry, and crispy pork. Together creating an aroma that will excite your tastebuds! Don't order if on a diet because you'll be coming back for more!</p>
+                      </div>
+						<div class="col-md-12" style="display:none;" id="myAlert2">
+							<div class="alert alert-success alert-dismissable" id="myAlert22">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								Added Pork Cutlet to cart.
+							</div>
+						</div>
+					  <div class="col-md-3">
+						<p><a value="burger-button" onclick="showAlert2();" type="burger-button"  class="btn btn-info btn-block">Add to cart</a></p>
+					  </div>
+					  <div class="col-md-6">
+					  </div>
+					  <div class="col-md-3">
+						<p><a href="/order" class="btn btn-info btn-block">Order</a></p>
+					  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+	</div>
+  </div>
+  
+  <!-- MODAL CODE HERE -->
+  <div id="burger" class="modal fade">
+	  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel" style="text-align:center;"> Airwave</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="well">
+						<a href="/order">
+							<img class="img-responsive" src="{% static 'MainPage/img/burger.jpg' %}" alt="">
+						</a>
+						<h3>
+							<a href="/order">Delectable Burger</a> - <small> 6.95 </small>
+						</h3>
+						<p>This bold burger comes directly from the grill bursting onto the plate! Enjoy this delicious classic!</p>
+                      </div>
+					<div class="col-md-12" style="display:none;" id="myAlert">
+						<div class="alert alert-success alert-dismissable" id="myAlert2">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								Added Delectable Burger to cart.
+						</div>
+					</div>
+					  <div class="col-md-3">
+						<p><a value="burger-button" onclick="showAlert();" type="burger-button" class="btn btn-info btn-block">Add to cart</a></p>
+					  </div>
+					  <div class="col-md-6">
+					  </div>
+					  <div class="col-md-3">
+						<p><a href="/order" class="btn btn-info btn-block">Order</a></p>
+					  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+	</div>
+  </div>
 
 </html>
